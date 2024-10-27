@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "myfont" ;
+  src: url('FiraCode-Regular.ttf');
+}
+
 * {
   color: #fff;
+  font-family:myfont;
 }
 
 body {
   background-color: #212121;
 
+}
+
+#taskList::-webkit-scrollbar{
+  display: none;
 }
