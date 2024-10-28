@@ -23,3 +23,6 @@ body {
 #taskList::-webkit-scrollbar{
   display: none;
 }
+#random::-webkit-scrollbar{
+  display: none;
+}
