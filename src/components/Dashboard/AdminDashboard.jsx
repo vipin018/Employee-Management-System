@@ -3,7 +3,7 @@ import Header from '../Others/Header'
 import CreateTask from '../Others/CreateTask'
 import AllTask from '../Others/AllTask'
 
-const AdminDashboard = () => {
+const AdminDashboard = ({data}) => {
     return (
         <div className='h-screen w-full p-10'>
             <Header />

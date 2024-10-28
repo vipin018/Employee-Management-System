@@ -1,14 +1,21 @@
 const employees = [
     {
         "id": 1,
+        "firstName": "Amit",
         "email": "employee1@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        },
         "tasks": [
             {
                 "title": "Complete Project Proposal",
                 "description": "Draft the initial project proposal for review.",
                 "date": "2024-10-30",
-                "categories": ["documentation", "planning"],
+                "category": "documentation",
                 "active": true,
                 "newTask": false,
                 "completed": false,
@@ -18,7 +25,7 @@ const employees = [
                 "title": "Client Meeting Preparation",
                 "description": "Prepare for the upcoming client meeting.",
                 "date": "2024-11-01",
-                "categories": ["meetings", "client"],
+                "category": "meetings",
                 "active": false,
                 "newTask": true,
                 "completed": false,
@@ -28,7 +35,7 @@ const employees = [
                 "title": "Finalize Budget Proposal",
                 "description": "Review and finalize the annual budget proposal.",
                 "date": "2024-11-05",
-                "categories": ["budget", "finance"],
+                "category": "budget",
                 "active": false,
                 "newTask": false,
                 "completed": false,
@@ -38,14 +45,21 @@ const employees = [
     },
     {
         "id": 2,
+        "firstName": "Raj",
         "email": "employee2@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 1
+        },
         "tasks": [
             {
                 "title": "System Testing",
                 "description": "Perform testing on the new system modules.",
                 "date": "2024-10-31",
-                "categories": ["testing", "development"],
+                "category": "testing",
                 "active": true,
                 "newTask": false,
                 "completed": false,
@@ -55,7 +69,7 @@ const employees = [
                 "title": "Database Migration",
                 "description": "Migrate the existing database to the new server.",
                 "date": "2024-11-02",
-                "categories": ["migration", "database"],
+                "category": "migration",
                 "active": false,
                 "newTask": true,
                 "completed": false,
@@ -65,7 +79,7 @@ const employees = [
                 "title": "Documentation Update",
                 "description": "Update user manuals for the new software release.",
                 "date": "2024-11-04",
-                "categories": ["documentation", "software"],
+                "category": "documentation",
                 "active": false,
                 "newTask": false,
                 "completed": false,
@@ -75,14 +89,21 @@ const employees = [
     },
     {
         "id": 3,
+        "firstName": "Neha",
         "email": "employee3@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
             {
                 "title": "Inventory Update",
                 "description": "Update the inventory records for Q4.",
                 "date": "2024-10-29",
-                "categories": ["inventory", "records"],
+                "category": "inventory",
                 "active": true,
                 "newTask": false,
                 "completed": false,
@@ -92,7 +113,7 @@ const employees = [
                 "title": "Annual Budget Draft",
                 "description": "Prepare a draft for next year's budget.",
                 "date": "2024-11-05",
-                "categories": ["budget", "planning"],
+                "category": "budget",
                 "active": false,
                 "newTask": true,
                 "completed": false,
@@ -102,7 +123,7 @@ const employees = [
                 "title": "Team Workshop",
                 "description": "Organize a team workshop on project management.",
                 "date": "2024-11-07",
-                "categories": ["training", "team"],
+                "category": "training",
                 "active": false,
                 "newTask": false,
                 "completed": true,
@@ -112,14 +133,21 @@ const employees = [
     },
     {
         "id": 4,
+        "firstName": "Priya",
         "email": "employee4@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
             {
                 "title": "Sales Report Analysis",
                 "description": "Analyze Q3 sales report for trends.",
                 "date": "2024-10-28",
-                "categories": ["analysis", "sales"],
+                "category": "analysis",
                 "active": true,
                 "newTask": false,
                 "completed": false,
@@ -129,7 +157,7 @@ const employees = [
                 "title": "Marketing Strategy Review",
                 "description": "Review the current marketing strategy.",
                 "date": "2024-11-03",
-                "categories": ["marketing", "strategy"],
+                "category": "marketing",
                 "active": false,
                 "newTask": true,
                 "completed": false,
@@ -139,7 +167,7 @@ const employees = [
                 "title": "Customer Feedback Compilation",
                 "description": "Compile customer feedback from recent surveys.",
                 "date": "2024-11-06",
-                "categories": ["feedback", "customer"],
+                "category": "feedback",
                 "active": false,
                 "newTask": false,
                 "completed": true,
@@ -149,14 +177,21 @@ const employees = [
     },
     {
         "id": 5,
+        "firstName": "Vikram",
         "email": "employee5@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 2
+        },
         "tasks": [
             {
                 "title": "Website Update",
                 "description": "Update the company's website with new content.",
                 "date": "2024-10-30",
-                "categories": ["website", "content"],
+                "category": "website",
                 "active": true,
                 "newTask": false,
                 "completed": false,
@@ -166,7 +201,7 @@ const employees = [
                 "title": "SEO Optimization",
                 "description": "Optimize the website for better search engine ranking.",
                 "date": "2024-11-04",
-                "categories": ["SEO", "marketing"],
+                "category": "SEO",
                 "active": false,
                 "newTask": true,
                 "completed": false,
@@ -176,7 +211,7 @@ const employees = [
                 "title": "Product Launch Preparation",
                 "description": "Prepare for the upcoming product launch event.",
                 "date": "2024-11-09",
-                "categories": ["product", "event"],
+                "category": "product",
                 "active": false,
                 "newTask": false,
                 "completed": false,
@@ -189,10 +224,9 @@ const employees = [
 
 const admin = [{
     "id": 1,
-    "email": "admin@example.com",
+    "email": "admin@me.com",
     "password": "123"
 }]
-
 
 export const setLocalStorage = () => {
     localStorage.setItem('employees', JSON.stringify(employees))
@@ -203,6 +237,5 @@ export const getLocalStorage = () => {
     const employees = JSON.parse(localStorage.getItem('employees'))
     const admin = JSON.parse(localStorage.getItem('admin'))
 
-
-    console.log(employees,admin)
+    return { employees, admin };
 }
