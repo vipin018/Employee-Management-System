@@ -15,7 +15,7 @@ const TaskList = ({ data }) => {
                     if (elem.newTask) {
                         return <NewTask key={key} data={elem} />;
                     }
-                    if (elem.completed) {  // Corrected property name
+                    if (elem.completed) {
                         return <CompleteTask key={key} data={elem} />;
                     }
                     if (elem.failed) {

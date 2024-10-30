@@ -36,7 +36,7 @@ const employees = [
                 "description": "Review and finalize the annual budget proposal.",
                 "date": "2024-11-05",
                 "category": "budget",
-                "active": false,
+                "active": true,
                 "newTask": false,
                 "completed": false,
                 "failed": false

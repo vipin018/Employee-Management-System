@@ -10,16 +10,10 @@ const AuthProvider = ({ children }) => {
 
 
     useEffect(() => {
-        // setLocalStorage();
+        setLocalStorage();
         const { employees } = getLocalStorage();
         setUserData(employees)
-    }, []);
-
-    useEffect(() => {
-        if (userdata) {
-            setLocalStorage({ employees: userdata });
-        }
-    }, [userdata]);
+    }, []); 
 
     return (
         <div>
